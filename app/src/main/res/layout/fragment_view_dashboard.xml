@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".views.ViewDashboard"
+        android:background="#081B33"
+>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9"
+            android:id="@+id/guide"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/dashboard_users_recycler"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guide"
+    >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/guide"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Cerrar Sesión"
+            android:textColor="#FAFAFA"
+            android:backgroundTint="#2F4562"
+            android:id="@+id/dashboard_logout_button"
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
